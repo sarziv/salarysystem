@@ -10,4 +10,4 @@
 ## UI Mobile version
 
 
-![UI style](https://i.img![UI style](https://i.imgur.com/MULIWlV.png)
+[UI style](https://i.imgur.com/MULIWlV.png)
