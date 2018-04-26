@@ -10,4 +10,4 @@
 ## UI Mobile version
 
 
-<p align="center"><img src="https://imgur.com/a/JOHp1ZP"></p>
+![UI style](https://imgur.com/a/JOHp1ZP)
