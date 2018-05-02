@@ -11,15 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.app');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::post('/add', 'AddController@store');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/tracker', 'AddController@show');
 
+Route::resource('add','AddController');

@@ -12,7 +12,7 @@
 <br>
                                  <div class="card">
                                      <div class="card-header text-center" style="background-color: #e3f2fd;">
-                                         Sveikas! Prisijungęs <b> {{ Auth::user()->name }}</b>
+                                         Sveikas!
                                      </div>
                                      <div class="card-body">
                                          <h5 class="card-title">E-Systema tavo pinigam skaičiuoti.</h5>

@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-sm" style="background-color: #e3f2fd;">
         <div class="container">
             <!-- Branding Image -->
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{ url('/home') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
 
@@ -77,5 +77,6 @@
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/addCalc.js') }}"></script>
 </body>
 </html>
