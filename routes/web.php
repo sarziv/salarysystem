@@ -20,3 +20,4 @@ Route::post('/add', 'AddController@store');
 Route::get('/tracker', 'AddController@show');
 
 Route::resource('add','AddController');
+

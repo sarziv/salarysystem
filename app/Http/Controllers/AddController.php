@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Add;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -56,7 +57,9 @@ class AddController extends Controller
     public function show()
     {
 
-        return view('layouts.show');
+        $trackers = Add::all();
+        return View('layouts.show',compact('trackers'));
+
     }
 
     /**
