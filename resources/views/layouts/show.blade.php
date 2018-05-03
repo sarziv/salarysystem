@@ -19,19 +19,18 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <table class="table table-striped">
+                                    <table class="table table-striped text-center">
                                         <thead>
+
                                     <tr>
-                                        <th>User_id</th>
                                         <th>Paletes</th>
                                         <th>Eilutes</th>
-                                        <th>Data</th>
+                                        <th>Išsaugota</th>
                                     </tr>
                                         </thead>
                                         <tbody>
                                     @foreach($trackers as $tracker)
                                         <tr>
-                                            <td>{{$tracker['user_id']}}</td>
                                             <td>{{$tracker['eilutes']}}</td>
                                             <td>{{$tracker['pallet']}}</td>
                                             <td>{{$tracker['created_at']}}</td>

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Add;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 
 class AddController extends Controller
 {
@@ -57,7 +59,10 @@ class AddController extends Controller
     public function show()
     {
 
-        $trackers = Add::all();
+        $trackers = Add::where('user_id', '=',auth()->id())
+            ->orderBy('created_at', 'desc')
+            ->get();
+
         return View('layouts.show',compact('trackers'));
 
     }
@@ -68,9 +73,20 @@ class AddController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function showMonth()
     {
-        //
+
+        //sum of pallets and eilutes
+        //order and group by MONTH
+        $manages = DB::table('adds')->where('user_id', '=', auth()->id())
+            ->select(DB::raw('sum(pallet) as totalpallet')
+            ,DB::raw('sum(eilutes) as totaleilutes')
+            ,DB::raw("MONTH(created_at) as month"))
+            ->groupBy('month')
+            ->orderBy('month')
+            ->get();
+
+        return view('layouts.manage',compact('manages'));
     }
 
     /**
@@ -80,10 +96,6 @@ class AddController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.

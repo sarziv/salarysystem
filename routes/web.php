@@ -13,11 +13,14 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::post('/add', 'AddController@store');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/tracker', 'AddController@show');
 
+Route::get('/manage', 'AddController@showMonth');
+
 Route::resource('add','AddController');
+
 

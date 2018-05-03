@@ -38,13 +38,13 @@
                         <a class="nav-link" href="/home"><i class="fas fa-home"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/add"><i class="fas fa-plus"></i> Add</a>
+                        <a class="nav-link" href="/add"><i class="fas fa-plus"></i> Pridėti</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/tracker"><i class="fab fa-stack-overflow"></i> Tracker</a>
+                        <a class="nav-link" href="/tracker"><i class="fab fa-stack-overflow"></i> Mano istorija</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/manage"><i class="far fa-list-alt"></i> Manage</a>
+                        <a class="nav-link" href="/manage"><i class="far fa-list-alt"></i> Mėnesio alga</a>
                     </li>
                 </ul>
                 @endif
