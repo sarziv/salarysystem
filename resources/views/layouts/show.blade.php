@@ -23,8 +23,8 @@
                                         <thead>
 
                                     <tr>
-                                        <th>Paletes</th>
-                                        <th>Eilutes</th>
+                                        <th>Paletės</th>
+                                        <th>Eilutės</th>
                                         <th>Išsaugota</th>
                                     </tr>
                                         </thead>

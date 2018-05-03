@@ -26,7 +26,7 @@
 
             <!-- Collapsed Hamburger -->
             <button class="navbar-toggler togglerColor" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <i class="fas fa-play"></i>
+                <i class="fas fa-angle-double-down"></i>
              </button>
 
             <div class="collapse navbar-collapse text-center" id="collapsibleNavbar">
@@ -35,7 +35,7 @@
                 <hr>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/home"><i class="fas fa-home"></i> Home</a>
+                        <a class="nav-link" href="/home"><i class="fas fa-home"></i> Pagrindinis</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/add"><i class="fas fa-plus"></i> Pridėti</a>
@@ -53,14 +53,14 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user-plus"></i> Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> Prisijungti</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user-plus"></i> Registruotis</a></li>
                     @else
                         <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
-                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                    <i class="fas fa-sign-out-alt"></i> Atsijungti
                                 </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 {{ csrf_field() }}

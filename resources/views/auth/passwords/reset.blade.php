@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <br>
             <div class="card">
-                <div class="card-header" style="background-color: #e3f2fd;">Reset Password</div>
+                <div class="card-header" style="background-color: #e3f2fd;">Pakeisti slaptažodį</div>
                 <div class="card-body">
                     <form role="form" method="POST" action="{{ url('/password/reset') }}">
                         {!! csrf_field() !!}
@@ -14,7 +14,7 @@
                         <input type="hidden" name="token" value="{{ $token }}">
 
                         <div class="form-group row">
-                            <label class="col-lg-4 col-form-label text-lg-right">E-Mail Address</label>
+                            <label class="col-lg-4 col-form-label text-lg-right">E-Paštas</label>
 
                             <div class="col-lg-6">
                                 <input
@@ -32,7 +32,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-lg-4 col-form-label text-lg-right">Password</label>
+                            <label class="col-lg-4 col-form-label text-lg-right">Slaptažodis</label>
 
                             <div class="col-lg-6">
                                 <input
@@ -49,7 +49,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label class="col-lg-4 col-form-label text-lg-right">Confirm Password</label>
+                            <label class="col-lg-4 col-form-label text-lg-right">Patvirtinti slaptažodį</label>
                             <div class="col-lg-6">
                                 <input
                                         type="password"
@@ -67,7 +67,7 @@
                         <div class="form-group row">
                             <div class="col-lg-6 offset-lg-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Reset Password
+                                     Pakeisti slaptažodį
                                 </button>
                             </div>
                         </div>

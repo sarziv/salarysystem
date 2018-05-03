@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <br>
             <div class="card">
-                <div class="card-header" style="background-color: #e3f2fd;">Reset Password</div>
+                <div class="card-header" style="background-color: #e3f2fd;">Pakeisti slaptažodį</div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -18,7 +18,7 @@
                         {!! csrf_field() !!}
 
                         <div class="form-group row">
-                            <label class="col-lg-4 col-form-label text-lg-right">E-Mail Address</label>
+                            <label class="col-lg-4 col-form-label text-lg-right">E-Paštas</label>
 
                             <div class="col-lg-6">
                                 <input type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}">
@@ -34,7 +34,7 @@
                         <div class="form-group row">
                             <div class="col-lg-6 offset-lg-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Send Password Reset Link
+                                    Siūsti slaptažodžio pakeitima
                                 </button>
                             </div>
                         </div>

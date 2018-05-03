@@ -85,7 +85,7 @@
                                                     </td>
                                                 <td>{{$manage->totalpallet}}</td>
                                                 <td>{{$manage->totaleilutes}}</td>
-                                                <td>{{($manage->totaleilutes * 0.09) + ($manage->totalpallet * 0.11)}}</td>
+                                                <td>{{($manage->totaleilutes * 0.09) + ($manage->totalpallet * 0.11)}}€</td>
                                             </tr>
                                         @endforeach
                                         </tbody>

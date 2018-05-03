@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Gugi);/*!
+@import url(https://fonts.googleapis.com/css?family=Nunito);/*!
  * Bootstrap v4.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10389,7 +10389,7 @@ a.text-dark:focus {
 }
 
 body {
-  font-family: 'Gugi', cursive;
+  font-family: 'Nunito', sans-serif;
 }
 
 .togglerColor {
