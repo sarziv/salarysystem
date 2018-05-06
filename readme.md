@@ -14,8 +14,6 @@
 - password reset by email
 - counting daily salary
 - Specific salary calculator
-<<<<<<< HEAD
 - delete pop-up warning
-=======
->>>>>>> origin/master
+-admin features
 
