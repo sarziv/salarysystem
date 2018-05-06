@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/*!
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Titan+One);/*!
  * Bootstrap v4.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10393,7 +10393,7 @@ body {
 }
 
 .togglerColor {
-  border: 2px solid #3097d1;
+  border: 15px solid #3097d1;
 }
 
 .fas {

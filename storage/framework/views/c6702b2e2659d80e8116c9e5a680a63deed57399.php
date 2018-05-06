@@ -4,7 +4,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <br>
                 <div class="card">
-                    <div class="card-header text-center" style="background-color: #e3f2fd;">Registracija</div>
+                    <div class="card-header text-center" style="background-color: #e3f2fd;"><b>Registracija</b></div>
 
                     <div class="card-body">
                         <form class="form-horizontal" method="POST" action="<?php echo e(route('register')); ?>">
@@ -12,7 +12,7 @@
 
 
                             <div class="form-group<?php echo e($errors->has('name') ? ' has-error' : ''); ?>">
-                                <label for="name" class="col-md-12 text-center control-label">Vardas ir Pavardė</label>
+                                <label for="name" class="col-md-12 text-center control-label"><b>Vardas</b> ir <b>Pavardė</b></label>
 
                                 <div class="col-md-6 mx-auto">
                                     <input id="name" type="text" class="form-control" name="name" value="<?php echo e(old('name')); ?>" required autofocus>
@@ -26,7 +26,7 @@
                             </div>
 
                             <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
-                                <label for="email" class="col-md-12 text-center control-label">E-Paštas</label>
+                                <label for="email" class="col-md-12 text-center control-label"><b>E-Paštas</b></label>
 
                                 <div class="col-md-6 mx-auto">
                                     <input id="email" type="email" class="form-control" name="email" value="<?php echo e(old('email')); ?>" required>
@@ -40,7 +40,7 @@
                             </div>
 
                             <div class="form-group<?php echo e($errors->has('password') ? ' has-error' : ''); ?>">
-                                <label for="password" class="col-md-12 text-center control-label">Slaptažodis</label>
+                                <label for="password" class="col-md-12 text-center control-label"><b>Slaptažodis</b></label>
 
                                 <div class="col-md-6 mx-auto">
                                     <input id="password" type="password" class="form-control" name="password" required>
@@ -54,7 +54,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="password-confirm" class="col-md-12 text-center control-label">Patvirtinti slaptažodį</label>
+                                <label for="password-confirm" class="col-md-12 text-center control-label"><b>Patvirtinti slaptažodį</b></label>
 
                                 <div class="col-md-6 mx-auto">
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
