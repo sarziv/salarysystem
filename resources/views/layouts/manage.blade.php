@@ -13,13 +13,13 @@
                 <div class="card">
                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}"/>
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
-                        Vartotojas: <b> {{ Auth::user()->name }}</b>
+                        <b>Mėnesio alga</b>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <table class="table table-striped text-center">
+                                    <table class="table table-bordered text-center">
                                         <thead>
                                         <tr>
                                             <th>Mėnesis</th>

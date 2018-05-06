@@ -1,13 +1,13 @@
-@extends('app')
 
-@section('content')
+
+<?php $__env->startSection('content'); ?>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-md-offset-2">
                 <br>
-                @include('flash-message')
+                <?php echo $__env->make('flash-message', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                 <div class="card">
-                    <input type="hidden" name="user_id" value="{{Auth::user()->id}}"/>
+                    <input type="hidden" name="user_id" value="<?php echo e(Auth::user()->id); ?>"/>
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
                        <b>
                            Istorija
@@ -30,21 +30,21 @@
                                     </tr>
                                         </thead>
                                         <tbody>
-                                    @foreach($trackers as $tracker)
+                                    <?php $__currentLoopData = $trackers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tracker): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
-                                            <td>{{$tracker['eilutes']}}</td>
-                                            <td>{{$tracker['pallet']}}</td>
+                                            <td><?php echo e($tracker['eilutes']); ?></td>
+                                            <td><?php echo e($tracker['pallet']); ?></td>
                                             <td>
-                                                {{($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)}}€
+                                                <?php echo e(($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)); ?>€
                                             <br>
-                                               <b>{{$tracker['created_at']->format('m/d')}}</b>
+                                               <b><?php echo e($tracker['created_at']->format('m/d')); ?></b>
                                             </td>
 
                                             <td>
-                                                @include ('layouts.showModal')
+                                                <?php echo $__env->make('layouts.showModal', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
                                             </td>
                                         </tr>
-                                    @endforeach
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </tbody>
                                     </table>
                                 </div>
@@ -57,4 +57,6 @@
         </div>
     </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

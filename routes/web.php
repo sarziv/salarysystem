@@ -21,6 +21,7 @@ Route::get('/tracker', 'AddController@show');
 
 Route::get('/manage', 'AddController@showMonth');
 
+
 Route::resource('add','AddController');
 
 

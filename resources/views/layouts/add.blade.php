@@ -8,7 +8,7 @@
                 @include('flash-message')
                 <div class="card">
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
-                        Skaičiuok kiek uždirbai!
+                        <b>Skaičiuok kiek uždirbai!</b>
                     </div>
                     <div class="card-body">
 

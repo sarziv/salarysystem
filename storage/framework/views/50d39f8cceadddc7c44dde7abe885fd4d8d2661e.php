@@ -1,6 +1,6 @@
 <div class="card-body text-center">
     <form name="formcalc">
-        <input type="hidden" name="user_id" value="{{Auth::user()->id}}"/>
+        <input type="hidden" name="user_id" value="<?php echo e(Auth::user()->id); ?>"/>
         <div class="form-group">
             <label for="pallet" class="col-md-4 control-label"><b>Paletės</b></label>
 

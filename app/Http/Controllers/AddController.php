@@ -73,11 +73,12 @@ class AddController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //TODO Change to group by YEAR + MONTH.
     public function showMonth()
     {
-
         //sum of pallets and eilutes
         //order and group by MONTH
+        //Outdated at 2019 ONLY COUNTS MONTHS. not a final system. my little project.
         $manages = DB::table('adds')->where('user_id', '=', auth()->id())
             ->select(DB::raw('sum(pallet) as totalpallet')
             ,DB::raw('sum(eilutes) as totaleilutes')
@@ -89,22 +90,16 @@ class AddController extends Controller
         return view('layouts.manage',compact('manages'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    //Delete feature need to be added for user erros but need some kind of safety
+    //Maybe other delete screen.
+    //TODO pop up
     public function destroy($id)
     {
-        //
+        $task = Add::findOrFail($id);
+
+        $task->delete();
+
+        return back()->with('warning','Ištrinta sekmingai');
+
     }
 }

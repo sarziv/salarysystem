@@ -13,8 +13,6 @@
 ### features added
 - password reset by email
 - counting daily salary
-<<<<<<< HEAD
 - Specific salary calculator
-=======
-- Specific salary calculator
->>>>>>> origin/master
+- delete pop-up warning
+
