@@ -5,15 +5,11 @@ function sumValues() {
     res=(num1*0.11)+(num2*0.09);
     resfixed=res.toFixed(2);
     document.getElementById("result").innerHTML=resfixed;
-}
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
+}
+function populateSecondTextBox() {
+
+    document.getElementById('eilutesSecond').innerHTML = document.getElementById('eilutes').value;
+    document.getElementById('palletSecond').innerHTML = document.getElementById('pallet').value;
+    document.getElementById('resultSecond').innerHTML = document.getElementById('result').innerHTML;
 }

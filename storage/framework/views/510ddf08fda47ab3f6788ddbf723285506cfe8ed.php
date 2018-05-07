@@ -14,13 +14,13 @@
                 <div class="card">
                     <input type="hidden" name="user_id" value="<?php echo e(Auth::user()->id); ?>"/>
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
-                        <b>Mėnesio alga</b>
+                        <b>Atlyginimas</b>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="col-xs-12 col-sm-12 col-md-12 table-responsive">
                                 <div class="form-group">
-                                    <table class="table table-bordered text-center">
+                                    <table class="table  table-bordered text-center">
                                         <thead>
                                         <tr>
                                             <th>Mėnesis</th>
@@ -83,6 +83,8 @@
                                                         <?php break; ?>
 
                                                     <?php endswitch; ?>
+                                                    <?php echo e($manage->year); ?>
+
                                                     </td>
                                                 <td><?php echo e($manage->totalpallet); ?></td>
                                                 <td><?php echo e($manage->totaleilutes); ?></td>

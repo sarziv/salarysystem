@@ -37,7 +37,7 @@
                                             <td>
                                                 <?php echo e(($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)); ?>€
                                             <br>
-                                               <b><?php echo e($tracker['created_at']->format('m/d')); ?></b>
+                                               <b><?php echo e($tracker['created_at']->format('y/m/d')); ?></b>
                                             </td>
 
                                             <td>

@@ -12,11 +12,9 @@
                     </div>
                     <div class="card-body">
 
-
-              {!! Form::open(array('route' => 'add.store','method'=>'POST')) !!}
+                        {!! Form::open(array('route' => 'add.store','method'=>'POST')) !!}
                         @include('forms.create')
-              {!! Form::close() !!}
-
+                        {!! Form::close() !!}
                     </div>
                 </div>
 

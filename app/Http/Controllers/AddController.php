@@ -73,7 +73,7 @@ class AddController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    //TODO Change to group by YEAR + MONTH.
+
     public function showMonth()
     {
         //sum of pallets and eilutes
@@ -82,10 +82,11 @@ class AddController extends Controller
         $manages = DB::table('adds')->where('user_id', '=', auth()->id())
             ->select(DB::raw('sum(pallet) as totalpallet')
             ,DB::raw('sum(eilutes) as totaleilutes')
-            ,DB::raw("MONTH(created_at) as month"))
-            ->groupBy('month')
-            ->orderBy('month')
+            ,DB::raw('YEAR(created_at) year, MONTH(created_at) month'))
+            ->groupBy('year', 'month')
+            ->orderByRaw('min(created_at) desc')
             ->get();
+
 
         return view('layouts.manage',compact('manages'));
     }

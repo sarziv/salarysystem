@@ -37,7 +37,7 @@
                                             <td>
                                                 {{($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)}}€
                                             <br>
-                                               <b>{{$tracker['created_at']->format('m/d')}}</b>
+                                               <b>{{$tracker['created_at']->format('y/m/d')}}</b>
                                             </td>
 
                                             <td>

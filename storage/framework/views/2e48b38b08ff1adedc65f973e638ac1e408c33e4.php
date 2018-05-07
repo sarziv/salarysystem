@@ -1,4 +1,4 @@
-<div class="nav-side-menu">
+<div class="nav-side-menu" style="">
     <div class="brand" style="font-size: large; font-family: 'Titan One', cursive;"><b><?php echo e(config('app.name', 'Laravel')); ?></b></div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
 
@@ -23,7 +23,7 @@
             </li>
             <li>
                 <a class="dblock" href="/manage">
-                    <i class="fa fa-list-alt fa-lg"></i> Mėnesio alga
+                    <i class="fa fa-list-alt fa-lg"></i> Atlyginimas
                 </a>
             </li>
             <?php endif; ?>

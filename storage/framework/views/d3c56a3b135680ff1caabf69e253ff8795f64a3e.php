@@ -12,12 +12,10 @@
                     </div>
                     <div class="card-body">
 
-
-              <?php echo Form::open(array('route' => 'add.store','method'=>'POST')); ?>
+                        <?php echo Form::open(array('route' => 'add.store','method'=>'POST')); ?>
 
                         <?php echo $__env->make('forms.create', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-              <?php echo Form::close(); ?>
-
+                        <?php echo Form::close(); ?>
 
                     </div>
                 </div>
