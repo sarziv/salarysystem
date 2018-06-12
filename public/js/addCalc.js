@@ -1,23 +1,6 @@
-$(document).ready(function(){
-
-    $('#sendButton').attr('disabled',true);
-
-    $('#pallet').keyup && $('#eilutes').keyup(function(){
-        if($(this).val().length !=0){
-            $('#sendButton').attr('disabled', false);
-        }
-        else if($(this).val() < 0){
-            $('#sendButton').attr('disabled', false);
-        }
-        else
-        {
-            $('#sendButton').attr('disabled', true);
-        }
-
-    })
-});
 
 function sumValues() {
+
     var num1,num2, res,resfixed;
     num1=Number(document.getElementById("pallet").value);
     num2=Number(document.getElementById("eilutes").value);
@@ -26,8 +9,13 @@ function sumValues() {
 
     //over ride if negative
     if(resfixed < 0) {
+        $('#sendButton').attr('disabled', true);
         resfixed = "Neigiamas skaičius";
     }
+    else {
+        $('#sendButton').attr('disabled', false);
+    }
+
     document.getElementById("result").innerHTML=resfixed;
 }
 
