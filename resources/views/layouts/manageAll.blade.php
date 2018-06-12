@@ -25,6 +25,7 @@
                                             <th>Mėnesis</th>
                                             <th>Paletės</th>
                                             <th>Eilutės</th>
+                                            <th>VIP</th>
                                             <th>Uždirbta</th>
                                         </tr>
                                         </thead>
@@ -86,6 +87,7 @@
                                                     </td>
                                                 <td>{{$manage->totalpallet}}</td>
                                                 <td>{{$manage->totaleilutes}}</td>
+                                                <td>{{$manage->totalvip}}</td>
                                                 <td>{{($manage->totaleilutes * 0.09) + ($manage->totalpallet * 0.11)}}€</td>
                                             </tr>
                                         @endforeach

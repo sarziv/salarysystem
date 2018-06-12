@@ -1,10 +1,11 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#ModalCenter{{$tracker['eilutes']}}">
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#ModalCenter{{$tracker['id']}}">
     Ištrinti
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="ModalCenter{{$tracker['eilutes']}}" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+
+<div class="modal fade" id="ModalCenter{{$tracker['id']}}" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -14,7 +15,6 @@
                 </button>
             </div>
             <div class="modal-body">
-
                 <div class="d-inline "><b>Paletes</b> | {{$tracker['pallet']}}</div>
                 <br>
                 <div class="d-inline "><b>Eilutes</b> | {{$tracker['eilutes']}}</div>

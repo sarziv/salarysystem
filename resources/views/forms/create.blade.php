@@ -14,6 +14,12 @@
                 <input id="eilutes" type="number" class="form-control" min="0"  onkeyup="sumValues(), populateSecondTextBox() "  name="eilutes" required>
             </div>
         </div>
+        <div class="form-group">
+            <label for="vip" class="col-md-4 control-label"><b>VIP</b></label>
+            <div class="col-md-6 mx-auto">
+                <input id="vip" type="number" class="form-control" min="0"  onkeyup="sumValues(), populateSecondTextBox() " value="0"  name="vip" required style="width: 80px; margin:0px auto; display:block;">
+            </div>
+        </div>
         <div class="col-md-6 mx-auto">
             Uždirbau: <b><span  class="label" id="result" size="5"></span></b> €
         </div>

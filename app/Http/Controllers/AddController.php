@@ -44,6 +44,7 @@ class AddController extends Controller
             'user_id' => 'required',
             'pallet' => 'required',
             'eilutes' => 'required',
+            'vip' => 'required'
         ]);
 
         Add::create($request->all());
@@ -90,6 +91,7 @@ class AddController extends Controller
         $manages = DB::table('adds')->where('user_id', '=', auth()->id())->take(3)
             ->select(DB::raw('sum(pallet) as totalpallet')
             ,DB::raw('sum(eilutes) as totaleilutes')
+                ,DB::raw('sum(vip) as totalvip')
             ,DB::raw('YEAR(created_at) year, MONTH(created_at) month'))
             ->groupBy('year', 'month')
             ->orderByRaw('min(created_at) desc')
@@ -104,6 +106,7 @@ class AddController extends Controller
         $manages = DB::table('adds')->where('user_id', '=', auth()->id())
             ->select(DB::raw('sum(pallet) as totalpallet')
                 ,DB::raw('sum(eilutes) as totaleilutes')
+                ,DB::raw('sum(vip) as totalvip')
                 ,DB::raw('YEAR(created_at) year, MONTH(created_at) month'))
             ->groupBy('year', 'month')
             ->orderByRaw('min(created_at) desc')

@@ -15,7 +15,7 @@
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
                         <b>Atlyginimas</b>
                         <p>Paskutiniai 3 Mėnesiai</p>
-                        <p><a href="{{ route('manageAll') }}">Visi mano atlyginimai</a></p>
+                        <p><a href="{{ route('manageAll') }}">Visi mano atlyginimai <i class="fa fa-arrow-alt-circle-right"></i></a></p>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -27,6 +27,7 @@
                                             <th>Mėnesis</th>
                                             <th>Paletės</th>
                                             <th>Eilutės</th>
+                                            <th>VIP</th>
                                             <th>Uždirbta</th>
                                         </tr>
                                         </thead>
@@ -86,8 +87,10 @@
                                                     @endswitch
                                                     {{ $manage->year }}
                                                     </td>
+
                                                 <td>{{$manage->totalpallet}}</td>
                                                 <td>{{$manage->totaleilutes}}</td>
+                                                <td>{{$manage->totalvip}}</td>
                                                 <td>{{($manage->totaleilutes * 0.09) + ($manage->totalpallet * 0.11)}}€</td>
                                             </tr>
                                         @endforeach

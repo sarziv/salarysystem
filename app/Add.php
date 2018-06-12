@@ -9,7 +9,7 @@ class Add extends Model
 
     /*Protected*/
     protected $fillable = [
-       'user_id', 'pallet', 'eilutes'
+        'id', 'user_id', 'pallet', 'eilutes'
     ];
 
 

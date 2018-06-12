@@ -23,6 +23,7 @@
                                     <tr>
                                         <th>Pal.</th>
                                         <th>Eil.</th>
+                                        <th>VIP</th>
                                         <th>Uždirbta
                                             <br>
                                             Data</th>
@@ -32,8 +33,9 @@
                                         <tbody>
                                     @foreach($trackers as $tracker)
                                         <tr>
-                                            <td>{{$tracker['eilutes']}}</td>
                                             <td>{{$tracker['pallet']}}</td>
+                                            <td>{{$tracker['eilutes']}}</td>
+                                            <td>{{$tracker['vip']}}</td>
                                             <td>
                                                 {{($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)}}€
                                             <br>
