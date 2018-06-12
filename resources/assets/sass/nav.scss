@@ -6,10 +6,13 @@
   background-color: #e3f2fd;
   position: fixed;
   top: 0px;
-  width: 300px;
+  width: 150px;
   height: 100%;
   color: #000000;
+  border: 1px solid black !important;
+  border-radius: 0px;
 }
+
 .nav-side-menu .brand {
   background-color: #e3f2fd;
   line-height: 50px;
@@ -101,8 +104,8 @@
   padding-right: 20px;
 }
 .nav-side-menu li:hover {
-  border-left: 3px solid #d19b3d;
-  background-color: #4f5b69;
+  border-left: 3px solid greenyellow;
+  background-color: white;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;

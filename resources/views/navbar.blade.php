@@ -39,6 +39,11 @@
                     <i class="fa fa-user-plus fa-lg"></i> Registruotis
                 </a>
             </li>
+                <li>
+                    <a class="dblock"  href="{{ route('admin') }}">
+                        <i class="fa fa-user-plus fa-lg"></i> Administracija
+                    </a>
+                </li>
             @else
                 <li>
                     <a class="dblock" href="{{ route('logout') }}"

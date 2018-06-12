@@ -1,6 +1,7 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 // Variables
 @import "variables";
 
@@ -16,4 +17,24 @@ body {
 
 .fas {
   color: #3097d1;
+}
+.footer {
+  margin-top: 15px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #E3F2FD;
+  color: black;
+  text-align: center;
+}
+.card {
+  border: 1px solid black !important;
+  border-radius: 0px;
+}
+.card-header {
+  font-size: medium;
+  font-family: 'Titillium Web', sans-serif;
+  border-bottom: 1px solid black;
+  background-color: white;
 }
