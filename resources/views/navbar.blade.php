@@ -41,7 +41,7 @@
             </li>
                 <li>
                     <a class="dblock"  href="{{ route('admin') }}">
-                        <i class="fa fa-user-plus fa-lg"></i> Administracija
+                        <i class="fa fa-unlock fa-lg" ></i> Administracija
                     </a>
                 </li>
             @else

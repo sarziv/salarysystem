@@ -59,11 +59,21 @@ class AddController extends Controller
     public function show()
     {
 
-        $trackers = Add::where('user_id', '=',auth()->id())
+        $trackers = Add::where('user_id', '=',auth()->id())->take(5)
             ->orderBy('created_at', 'desc')
             ->get();
 
         return View('layouts.show',compact('trackers'));
+
+    }
+    public function showAll()
+    {
+
+        $trackers = Add::where('user_id', '=',auth()->id())
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return View('layouts.showAll',compact('trackers'));
 
     }
 
@@ -76,10 +86,8 @@ class AddController extends Controller
 
     public function showMonth()
     {
-        //sum of pallets and eilutes
-        //order and group by MONTH
-        //Outdated at 2019 ONLY COUNTS MONTHS. not a final system. my little project.
-        $manages = DB::table('adds')->where('user_id', '=', auth()->id())
+
+        $manages = DB::table('adds')->where('user_id', '=', auth()->id())->take(3)
             ->select(DB::raw('sum(pallet) as totalpallet')
             ,DB::raw('sum(eilutes) as totaleilutes')
             ,DB::raw('YEAR(created_at) year, MONTH(created_at) month'))
@@ -90,10 +98,24 @@ class AddController extends Controller
 
         return view('layouts.manage',compact('manages'));
     }
+    public function showMonthAll()
+    {
+
+        $manages = DB::table('adds')->where('user_id', '=', auth()->id())
+            ->select(DB::raw('sum(pallet) as totalpallet')
+                ,DB::raw('sum(eilutes) as totaleilutes')
+                ,DB::raw('YEAR(created_at) year, MONTH(created_at) month'))
+            ->groupBy('year', 'month')
+            ->orderByRaw('min(created_at) desc')
+            ->get();
+
+
+        return view('layouts.manageAll',compact('manages'));
+    }
 
     //Delete feature need to be added for user erros but need some kind of safety
     //Maybe other delete screen.
-    //TODO pop up
+
     public function destroy($id)
     {
         $task = Add::findOrFail($id);

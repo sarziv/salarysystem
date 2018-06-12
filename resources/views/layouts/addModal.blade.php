@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#ModalCenter">
+<button type="button" id="sendButton" class="btn btn-warning" data-toggle="modal" data-target="#ModalCenter">
     Saugoti
 </button>
 

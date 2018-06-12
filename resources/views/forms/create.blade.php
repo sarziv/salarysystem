@@ -4,13 +4,14 @@
         <div class="form-group">
             <label for="pallet" class="col-md-4 control-label"><b>Paletės</b></label>
             <div class="col-md-6 mx-auto">
-                <input id="pallet" type="number" class="form-control"   onkeyup="sumValues(), populateSecondTextBox() " name="pallet" required>
+                <input id="pallet" type="number" class="form-control" min="0"  onkeyup="sumValues(), populateSecondTextBox() " name="pallet" required>
             </div>
         </div>
+
         <div class="form-group">
             <label for="eilutes" class="col-md-4 control-label"><b>Eilutės</b></label>
             <div class="col-md-6 mx-auto">
-                <input id="eilutes" type="number" class="form-control"  onkeyup="sumValues(), populateSecondTextBox() "  name="eilutes" required>
+                <input id="eilutes" type="number" class="form-control" min="0"  onkeyup="sumValues(), populateSecondTextBox() "  name="eilutes" required>
             </div>
         </div>
         <div class="col-md-6 mx-auto">

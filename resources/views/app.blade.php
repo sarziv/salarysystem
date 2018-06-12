@@ -25,10 +25,8 @@
     @include('navbar')
 
     @yield('content')
-
-    @include('footer')
 </div>
-
+@include('footer')
 
 
 <!-- Scripts -->

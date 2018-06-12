@@ -13,9 +13,7 @@
                 <div class="card">
                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}"/>
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
-                        <b>Atlyginimas</b>
-                        <p>Paskutiniai 3 Mėnesiai</p>
-                        <p><a href="{{ route('manageAll') }}">Visi mano atlyginimai</a></p>
+                        <b>Visi atlyginimai</b>
                     </div>
                     <div class="card-body">
                         <div class="row">

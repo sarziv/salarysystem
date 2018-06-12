@@ -10,10 +10,8 @@
                     <input type="hidden" name="user_id" value="{{Auth::user()->id}}"/>
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
                        <b>
-                           Istorija
+                          Visa Istorija
                        </b>
-                        <p>Paskutiniai 5 išsaugoti</p>
-                        <p><a href="{{ route('trackerAll') }}">Visa mano išsaugoti</a></p>
                     </div>
                     <div class="card-body">
                         <div class="row">

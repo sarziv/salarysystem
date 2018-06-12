@@ -20,8 +20,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('add','AddController');
 
 Route::get('/tracker', 'AddController@show');
+Route::get('/trackerAll', 'AddController@showAll')->name('trackerAll');
 
 Route::get('/manage', 'AddController@showMonth');
+Route::get('/manageAll', 'AddController@showMonthAll')->name('manageAll');
 
 route::get('/admin','AdminController@index')->name('admin');
 
