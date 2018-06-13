@@ -119,7 +119,7 @@ if($password == "") {
                 <div class="card-body text-center">
                     <h3>Prisijungti nepavyko!</h3>
 
-                    <button class="btn btn-primary" onclick="goBack()">Go Back</button>
+                    <button class="btn btn-primary" onclick="goBack()">Atgal</button>
 
                     <script>
                         function goBack() {
