@@ -1,3 +1,4 @@
+$('#sendButton').attr('disabled', true);
 
 function sumValues() {
 
@@ -8,12 +9,13 @@ function sumValues() {
     res=(num1*0.11)+(num2*0.09)+(num3*5);
     resfixed=res.toFixed(2);
 
+
     //over ride if negative
     if(resfixed < 0) {
         $('#sendButton').attr('disabled', true);
         resfixed = "Neigiamas skaičius";
     }
-    else {
+    else if (resfixed > 0){
         $('#sendButton').attr('disabled', false);
     }
 
@@ -24,5 +26,6 @@ function populateSecondTextBox() {
 
     document.getElementById('eilutesSecond').innerHTML = document.getElementById('eilutes').value;
     document.getElementById('palletSecond').innerHTML = document.getElementById('pallet').value;
+    document.getElementById('vipSecond').innerHTML = document.getElementById('vip').value;
     document.getElementById('resultSecond').innerHTML = document.getElementById('result').innerHTML;
 }

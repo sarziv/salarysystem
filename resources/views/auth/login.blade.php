@@ -40,7 +40,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group topmargin">
                                 <div class="col-md-6 mx-auto">
                                     <div class="checkbox">
                                         <label>

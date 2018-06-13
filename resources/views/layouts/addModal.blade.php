@@ -14,24 +14,23 @@
                 </button>
             </div>
             <div class="modal-body">
-                    <div class="d-inlines bg-success">
-                        Paletės
-                    </div>
-                    <div class="d-inline">
+                    <div class="">
+                        Paletės:
                        <b><span  class="label" id="palletSecond"></span></b>
                     </div>
 
-                <div class="d-inlines bg-success">
-                    Eilutės
-                </div>
-                <div class="d-inline ">
+                <div class="">
+                    Eilutės:
                     <b><span  class="label" id="eilutesSecond"></span></b>
                 </div>
 
-                <div class="d-inlines bg-success">
-                   Uždirbta
+                <div class="">
+                    Vip:
+                    <b><span  class="label" id="vipSecond"></span></b>
                 </div>
-                <div class="d-inline ">
+
+                <div class="">
+                   Uždirbta:
                     <b><span  class="label" id="resultSecond"></span></b> €
                 </div>
             </div>

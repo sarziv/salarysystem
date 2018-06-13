@@ -15,11 +15,13 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="d-inline "><b>Paletes</b> | {{$tracker['pallet']}}</div>
+                <div class="d-inline "><b class="modalbodyfontwidth">Paletes</b>: {{$tracker['pallet']}}</div>
                 <br>
-                <div class="d-inline "><b>Eilutes</b> | {{$tracker['eilutes']}}</div>
+                <div class="d-inline "><b class="modalbodyfontwidth">Eilutes</b>: {{$tracker['eilutes']}}</div>
                 <br>
-                <div class="d-inline bg-warning"><b>Išsaugota</b> | {{$tracker['created_at']}} </div>
+                <div class="d-inline "><b class="modalbodyfontwidth">Vip</b>: {{$tracker['vip']}}</div>
+                <br>
+                <div class="d-inline bg-warning"><b>Išsaugota</b>: {{$tracker['created_at']}} </div>
 
             </div>
 

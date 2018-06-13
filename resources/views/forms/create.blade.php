@@ -17,7 +17,14 @@
         <div class="form-group">
             <label for="vip" class="col-md-4 control-label"><b>VIP</b></label>
             <div class="col-md-6 mx-auto">
-                <input id="vip" type="number" class="form-control" min="0"  onkeyup="sumValues(), populateSecondTextBox() " value="0"  name="vip" required style="width: 80px; margin:0px auto; display:block;">
+
+                <select id="vip" type="number" class="form-control" min="0"  onchange="sumValues(), populateSecondTextBox() " value="1"  required style="width: 60px; margin:0px auto; display:block;" name="vip">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
             </div>
         </div>
         <div class="col-md-6 mx-auto">

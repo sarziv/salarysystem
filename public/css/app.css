@@ -10446,7 +10446,7 @@ body {
 }
 
 .form-group {
-  margin-bottom: 0px !important;
+  margin-bottom: 5px !important;
 }
 
 .footer a {
@@ -10461,5 +10461,17 @@ body {
 .table td {
   padding: 0px 0px 0px 0px !important;
   vertical-align: middle;
+}
+
+.topmargin {
+  margin-top: 10px;
+}
+
+.td {
+  vertical-align: middle;
+}
+
+.table thead th {
+  vertical-align: middle !important;
 }
 
