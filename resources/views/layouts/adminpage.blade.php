@@ -3,7 +3,7 @@
 
 @php
 $password = $_POST['password'];
-if($password == "asasas") {
+if($password == "") {
 @endphp
 <div class="container" style="margin-top: 20px">
     <div class="row justify-content-center">
