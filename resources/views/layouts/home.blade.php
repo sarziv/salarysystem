@@ -1,5 +1,4 @@
 @extends('app')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -14,35 +13,36 @@
                                      <div class="card-header text-center" style="background-color: #e3f2fd;">
                                          Vartotojas: <b> {{ Auth::user()->name }}</b>
                                      </div>
-                                     <div class="card-body">
-                                         <h5 class="card-title text-center">E-Systema tavo pinigam skaičiuoti</h5>
-                                         <p class="card-text ">
+                                         <div class="card-body">
+                                             <h5 class="card-title text-center">E-Systema tavo pinigam skaičiuoti</h5>
+                                             <p class="card-text ">
+                                                 <ul>
+                                             <p>Kaip naudotis?</p>
+                                                <ul>
+                                                    <li>Pridėti - Uždirbtų pinigų saugominas</li>
+                                                    <li>Istorija - Dienų istorija ir ištrynimas</li>
+                                                    <li>Atlyginimas - Viso mėnesio atlyginimas</li>
+                                                </ul>
+                                             <br>
+                                                <p> Kas naujo?</p>
                                              <ul>
-                                             <p> Nauja algų skaičiavimo sistema.</p>
-                                                Siūlykite pasiūlymas apie sistemos tobulinima -> Čia
-                                             <a href="https://discord.gg/nEbeTFE">Discord</a>
-                                         <p>
-                                             Kas naujo?
-                                             <ul>
-                                             <li>
-                                                 Naujas interface
-                                             </li>
-                                             <li>
-                                                 Ištrynimo galimybnes
-                                             </li>
-                                             <li>
-                                                 responcive tables
-                                             </li>
-                                         </ul>
-                                         </p>
-                                         </ul>
-                                         </p>
+                                                 <li>
+                                                    Administracijos funkcijos
+                                                 </li>
+                                                 <li>
+                                                     Vip maršrutai
+                                                 </li>
+                                                 <li>
+                                                     Patogesnis UI/UX
+                                                 </li>
+                                             </ul>
+                                             </p>
+                                             </ul>
+                                             </p>
 
-                                     </div>
+                                         </div>
                                  </div>
-
-                            </div>
-
+                     </div>
         </div>
     </div>
 @endsection

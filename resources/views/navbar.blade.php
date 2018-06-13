@@ -1,7 +1,6 @@
 <div class="nav-side-menu" style="">
     <div class="brand" style="font-size: large; font-family: 'Titan One', cursive;"><b>{{ config('app.name', 'Laravel') }}</b></div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-
     <div class="menu-list text-center">
         @if (!Auth::guest())
         <ul id="menu-content" class="menu-content collapse out">
@@ -58,4 +57,5 @@
             @endif
         </ul>
     </div>
+
 </div>

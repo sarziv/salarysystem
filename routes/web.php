@@ -13,9 +13,11 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+Route::get('/', function () {
+    return redirect('/home');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index');
 
 Route::resource('add','AddController');
 
@@ -27,6 +29,6 @@ Route::get('/manageAll', 'AddController@showMonthAll')->name('manageAll');
 
 route::get('/admin','AdminController@index')->name('admin');
 
-
+route::post('/adminpage','AdminController@adminpage')->name('adminpage');
 
 
