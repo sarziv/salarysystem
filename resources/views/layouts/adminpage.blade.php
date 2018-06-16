@@ -133,6 +133,7 @@ if($password == "") {
 </div>
 
 @php
-                    }
+    }
+//TODO QOF: Redirect if trying to enter by URL without password
 @endphp
 @endsection
