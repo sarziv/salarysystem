@@ -10,7 +10,7 @@ function sumValues() {
     resfixed=res.toFixed(2);
 
 
-    //over ride if negative
+    //override if negative
     if(resfixed < 0) {
         $('#sendButton').attr('disabled', true);
         resfixed = "Neigiamas skaičius";
@@ -28,4 +28,12 @@ function populateSecondTextBox() {
     document.getElementById('palletSecond').innerHTML = document.getElementById('pallet').value;
     document.getElementById('vipSecond').innerHTML = document.getElementById('vip').value;
     document.getElementById('resultSecond').innerHTML = document.getElementById('result').innerHTML;
+}
+function modalDisabledAfterClick() {
+    //Multiple submit protection on spam
+    $(document).ready(function(){
+        $("#sendModal").one("click", function(){
+            $(this).attr('disabled',true);
+        });
+    });
 }

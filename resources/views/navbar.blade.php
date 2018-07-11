@@ -16,6 +16,11 @@
                 </a>
             </li>
             <li>
+                <a class="dblock" href="/memo">
+                    <i class="fa fa-book fa-lg"></i> Priminimai
+                </a>
+            </li>
+            <li>
                 <a class="dblock" href="/tracker">
                     <i class="fab fa-stack-overflow fa-lg"></i> Istorija
                 </a>

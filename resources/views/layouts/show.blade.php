@@ -1,6 +1,6 @@
 @extends('app')
-
 @section('content')
+@if(auth::check())
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-md-offset-2">
@@ -39,7 +39,7 @@
                                             <td>{{$tracker['eilutes']}}</td>
                                             <td>{{$tracker['vip']}}</td>
                                             <td>
-                                                {{($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)}}€
+                                                {{($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)+ ($tracker['vip'] * 5)}}€
                                             <br>
                                                <b>{{$tracker['created_at']->format('y/m/d')}}</b>
                                             </td>
@@ -61,4 +61,7 @@
         </div>
     </div>
     </div>
+@else
+    @include('errors.sessionEnd')
+@endif
 @endsection

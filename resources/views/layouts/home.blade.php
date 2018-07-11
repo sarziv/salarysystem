@@ -20,6 +20,7 @@
                                              <p>Kaip naudotis?</p>
                                                 <ul>
                                                     <li>Pridėti - Uždirbtų pinigų saugominas</li>
+                                                    <li>Priminimai - Užrašų knygėlė.</li>
                                                     <li>Istorija - Dienų istorija ir ištrynimas</li>
                                                     <li>Atlyginimas - Viso mėnesio atlyginimas</li>
                                                 </ul>
@@ -27,13 +28,16 @@
                                                 <p> Kas naujo?</p>
                                              <ul>
                                                  <li>
-                                                    Administracijos funkcijos
+                                                    Priminimai, jai kada gedas nepadarė motivacinės ;)
+                                                 </li>
+                                             </ul>
+                                             <p> BugFix</p>
+                                             <ul>
+                                                 <li>
+                                                     Fast logout bug.
                                                  </li>
                                                  <li>
-                                                     Vip maršrutai
-                                                 </li>
-                                                 <li>
-                                                     Patogesnis UI/UX
+                                                     Multi-form request.
                                                  </li>
                                              </ul>
                                              </p>

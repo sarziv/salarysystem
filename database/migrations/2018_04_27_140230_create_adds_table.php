@@ -19,6 +19,7 @@ class CreateAddsTable extends Migration
             $table->integer('user_id');
             $table->integer('pallet');
             $table->integer('eilutes');
+            $table->integer('vip');
             $table->timestamps();
         });
     }

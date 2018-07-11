@@ -3,7 +3,7 @@
 
 @php
 $password = $_POST['password'];
-if($password == "") {
+if($password == "asdasd") {
 @endphp
 <div class="container" style="margin-top: 20px">
     <div class="row justify-content-center">
@@ -97,8 +97,6 @@ if($password == "") {
                                 </table>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -131,9 +129,7 @@ if($password == "") {
         </div>
     </div>
 </div>
-
 @php
     }
-//TODO QOF: Redirect if trying to enter by URL without password
 @endphp
 @endsection

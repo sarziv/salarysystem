@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" id="sendButton" class="btn btn-warning" data-toggle="modal" data-target="#ModalCenter">
+<button type="button" id="sendButton" class="btn btn-warning" data-toggle="modal" data-target="#ModalCenter" >
     Saugoti
 </button>
 
@@ -37,7 +37,7 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Atgal</button>
-                        <button type="submit" class="btn btn-success">
+                        <button id="sendModal" type="submit" class="btn btn-success" onclick="modalDisabledAfterClick()">
                             Saugoti
                         </button>
 
