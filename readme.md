@@ -1,20 +1,26 @@
 ## Web app salary_system
 
+v0.1
 [Site uploaded](https://rimtaivyrai.online/home)
 
-### features added initian release
+#### v0.1
 - Password reset by email
 - Counting daily salary
 - Specific salary calculator
 - Delete pop-up warning
 - Admin features
 
-#### New 06.18
+#### New v0.1.1
 - VIP added
 - Montly salary added
-- Boss Tab added(as requested)
-- More efficient UI/UX. up to 80% more efficient.
+- Administration tab added
+- Change UI/UX.
 
-##### Coming soon!
-- React TODO list/memo.
+#### New v0.1.2 bugfix patch
+- form-request bug
+- logout bug.
+
+#### Coming soon
+- Analitics tab.
+- Memo tab.
 
