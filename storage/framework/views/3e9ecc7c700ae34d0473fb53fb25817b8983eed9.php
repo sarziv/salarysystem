@@ -1,10 +1,11 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#ModalCenter<?php echo e($tracker['eilutes']); ?>">
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#ModalCenter<?php echo e($tracker['id']); ?>">
     Ištrinti
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="ModalCenter<?php echo e($tracker['eilutes']); ?>" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+
+<div class="modal fade" id="ModalCenter<?php echo e($tracker['id']); ?>" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -14,12 +15,13 @@
                 </button>
             </div>
             <div class="modal-body">
-
-                <div class="d-inline "><b>Paletes</b> | <?php echo e($tracker['pallet']); ?></div>
+                <div class="d-inline "><b class="modalbodyfontwidth">Paletes</b>: <?php echo e($tracker['pallet']); ?></div>
                 <br>
-                <div class="d-inline "><b>Eilutes</b> | <?php echo e($tracker['eilutes']); ?></div>
+                <div class="d-inline "><b class="modalbodyfontwidth">Eilutes</b>: <?php echo e($tracker['eilutes']); ?></div>
                 <br>
-                <div class="d-inline bg-warning"><b>Išsaugota</b> | <?php echo e($tracker['created_at']); ?> </div>
+                <div class="d-inline "><b class="modalbodyfontwidth">Vip</b>: <?php echo e($tracker['vip']); ?></div>
+                <br>
+                <div class="d-inline bg-warning"><b>Išsaugota</b>: <?php echo e($tracker['created_at']); ?> </div>
 
             </div>
 

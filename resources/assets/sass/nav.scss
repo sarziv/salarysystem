@@ -2,14 +2,13 @@
   font-family: verdana;
   font-size: 12px;
   font-weight: 300;
-  background-color: #e3f2fd;
+  background-color: white;
   position: fixed;
   float: none;
   top: 0px;
   width: 150px;
   height: 100%;
   color: #000000;
-  border: 1px solid black !important;
   border-radius: 0px;
 }
 
@@ -25,6 +24,7 @@
 }
 .nav-side-menu ul,
 .nav-side-menu li {
+  border-right: 0.5px solid black;
   list-style: none;
   padding: 0px;
   margin: 0px;
@@ -126,7 +126,6 @@
     top: 10px;
     z-index: 10 !important;
     padding: 3px;
-    background-color: #ffffff;
     color: #000;
     width: 40px;
     text-align: center;
@@ -144,6 +143,13 @@
 
   }
 }
+
+@media (min-width: 767px) {
+.offsetForNavBar {
+  margin-left: 150px;
+}
+}
+
 body {
   margin: 0px;
   padding: 0px;

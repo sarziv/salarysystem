@@ -21,9 +21,7 @@
 
 <body>
 <div id="app">
-
     @include('navbar')
-
     @yield('content')
 </div>
 @include('footer')

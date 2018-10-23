@@ -1,7 +1,7 @@
 
-
 <?php $__env->startSection('content'); ?>
-    <div class="container">
+<?php if(auth::check()): ?>
+    <div class="container offsetForNavBar">
         <div class="row justify-content-center">
             <div class="col-md-8 col-md-offset-2">
                 <br>
@@ -12,17 +12,20 @@
                        <b>
                            Istorija
                        </b>
+                        <p>Paskutiniai 5 išsaugoti</p>
+                        <p><a href="<?php echo e(route('trackerAll')); ?>">Visi mano išsaugoti <i class="fa fa-arrow-alt-circle-right"></i></a></p>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="table-responsive">
-                                <div class="form-group">
+                                <div class="form-groupto">
 
                                     <table class="table table-bordered text-center">
                                         <thead>
                                     <tr>
                                         <th>Pal.</th>
                                         <th>Eil.</th>
+                                        <th>VIP</th>
                                         <th>Uždirbta
                                             <br>
                                             Data</th>
@@ -32,10 +35,11 @@
                                         <tbody>
                                     <?php $__currentLoopData = $trackers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tracker): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <tr>
-                                            <td><?php echo e($tracker['eilutes']); ?></td>
                                             <td><?php echo e($tracker['pallet']); ?></td>
+                                            <td><?php echo e($tracker['eilutes']); ?></td>
+                                            <td><?php echo e($tracker['vip']); ?></td>
                                             <td>
-                                                <?php echo e(($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)); ?>€
+                                                <?php echo e(($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)+ ($tracker['vip'] * 5)); ?>€
                                             <br>
                                                <b><?php echo e($tracker['created_at']->format('y/m/d')); ?></b>
                                             </td>
@@ -57,6 +61,8 @@
         </div>
     </div>
     </div>
+<?php else: ?>
+    <?php echo $__env->make('errors.sessionEnd', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php endif; ?>
 <?php $__env->stopSection(); ?>
-
 <?php echo $__env->make('app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

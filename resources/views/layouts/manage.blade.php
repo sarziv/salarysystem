@@ -1,7 +1,7 @@
 @extends('app')
 @section('content')
 @if(auth::check())
-    <div class="container">
+    <div class="container offsetForNavBar">
         <div class="row justify-content-center">
             <div class="col-md-8 col-md-offset-2">
                 @if (session('status'))

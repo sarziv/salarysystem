@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#ModalCenter">
+<button type="button" id="sendButton" class="btn btn-warning" data-toggle="modal" data-target="#ModalCenter" disabled>
     Saugoti
 </button>
 
@@ -14,31 +14,30 @@
                 </button>
             </div>
             <div class="modal-body">
-                    <div class="d-inlines bg-success">
-                        Paletės
-                    </div>
-                    <div class="d-inline">
+                    <div class="">
+                        Paletės:
                        <b><span  class="label" id="palletSecond"></span></b>
                     </div>
 
-                <div class="d-inlines bg-success">
-                    Eilutės
-                </div>
-                <div class="d-inline ">
+                <div class="">
+                    Eilutės:
                     <b><span  class="label" id="eilutesSecond"></span></b>
                 </div>
 
-                <div class="d-inlines bg-success">
-                   Uždirbta
+                <div class="">
+                    Vip:
+                    <b><span  class="label" id="vipSecond"></span></b>
                 </div>
-                <div class="d-inline ">
+
+                <div class="">
+                   Uždirbta:
                     <b><span  class="label" id="resultSecond"></span></b> €
                 </div>
             </div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Atgal</button>
-                        <button type="submit" class="btn btn-success">
+                        <button id="sendModal" type="submit" class="btn btn-success" onclick="modalDisabledAfterClick()">
                             Saugoti
                         </button>
 
