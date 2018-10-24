@@ -31,9 +31,9 @@
                                     <?php if($userData != null): ?>
                                         <?php echo e($userData->totalfilled); ?>
 
-                                        <?php else: ?>
+                                    <?php else: ?>
                                         Neužpildyta.
-                                        <?php endif; ?>
+                                    <?php endif; ?>
 
                                 </span>
                             </li>
@@ -98,13 +98,13 @@
                             </li>
                             <li class="list-group-item justify-content-around">
                                 <p> Valandinis: <a class="btn btn-default btn-sm" data-toggle="collapse"
-                                                            href="#collapseValandinis" role="button"
-                                                            aria-expanded="false" aria-controls="collapseExample">
+                                                   href="#collapseValandinis" role="button"
+                                                   aria-expanded="false" aria-controls="collapseExample">
                                         Kas čia?
                                     </a>
                                 </p>
                                 <div class="collapse" id="collapseValandinis">
-                                   Tavo uždirbti pinigai padalinus ir tavo išdirbtų valandų (8 + papildomos valandos).
+                                    Tavo uždirbti pinigai padalinus ir tavo išdirbtų valandų (8 + papildomos valandos).
                                 </div>
                                 <span class="badge badge-dark col-3">
                                    <?php if($userData != null): ?>

@@ -1,8 +1,10 @@
-<div class="container text-center" >
-    <div class="row justify-content-center">
-        <div class="col-md-8 col-md-offset-2">
-                <h1>Prisijunkite per nauja.</h1>
-                <h3>Prisijungima galite rasti -> <a href="{{url('/login')}}"> Čia</a></h3>
+
+    <div id="notfound">
+        <div class="notfound">
+            <div class="notfound-404">
+                <h1>4<span>0</span>4</h1>
             </div>
+            <p>Kažkas magiško nutiko ir mes jus pametėme.</p>
+            <a href="{{url('/login')}}">Pagrindinis</a>
+        </div>
     </div>
-</div>
