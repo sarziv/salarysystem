@@ -23,7 +23,8 @@
                                     <tr>
                                         <th>Pal.</th>
                                         <th>Eil.</th>
-                                        <th>VIP</th>
+                                        <th>Vip.</th>
+                                        <th>Val.</th>
                                         <th>Uždirbta
                                             <br>
                                             Data</th>
@@ -36,6 +37,7 @@
                                             <td>{{$tracker['pallet']}}</td>
                                             <td>{{$tracker['eilutes']}}</td>
                                             <td>{{$tracker['vip']}}</td>
+                                            <td>{{$tracker['valandos']}}</td>
                                             <td>
                                                 {{($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)}}€
                                             <br>
@@ -53,12 +55,67 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+                @php
+                $pagination_range = 1;
+                @endphp
+                <nav aria-label="Page navigation ">
+                    <ul class="pagination justify-content-center">
 
+                        <li class="page-item {{ $trackers->previousPageUrl()==null ? 'disabled' : '' }}">
+                            <a class="page-link" href="{{ $trackers->previousPageUrl() ?? '#' }}"> <span aria-hidden="true">&laquo;</span></a>
+                        </li>
+
+
+                        @if ($trackers->currentPage() > 1+$pagination_range )
+
+                            <li class="page-item">
+                                <a class="page-link" href="{{ $trackers->url(1) ?? '#' }}">{{ 1 }}</a>
+                            </li>
+
+                            @if ($trackers->currentPage() > 1+$pagination_range+1 )
+                                <li class="page-item disabled">
+                                    <span class="page-link">&hellip;</span>
+                                </li>
+                            @endif
+
+                        @endif
+
+                        @for ($i=-$pagination_range; $i<=$pagination_range; $i++)
+
+                            @if ($trackers->currentPage()+$i > 0 && $trackers->currentPage()+$i <= $trackers->lastPage())
+                                <li class="page-item {{ $i==0 ? 'active' : '' }}">
+                                    <a class="page-link" href="{{ $trackers->url($trackers->currentPage()+$i) }}">{{ $trackers->currentPage()+$i }}</a>
+                                </li>
+                            @endif
+
+                        @endfor
+
+                        @if ($trackers->currentPage() < $trackers->lastPage()-$pagination_range )
+
+                            @if ($trackers->currentPage() < $trackers->lastPage()-$pagination_range-1 )
+                                <li class="page-item disabled">
+                                    <span class="page-link">&hellip;</span>
+                                </li>
+                            @endif
+
+                            <li class="page-item">
+                                <a class="page-link" href="{{ $trackers->url($trackers->lastPage()) ?? '#' }}">{{ $trackers->lastPage() }}</a>
+                            </li>
+
+                        @endif
+
+                        <li class="page-item {{ $trackers->nextPageUrl()==null ? 'disabled' : '' }}">
+                            <a class="page-link" href="{{ $trackers->nextPageUrl() ?? '#' }}"><span aria-hidden="true">&raquo;</span></a>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
-    </div>
+
 @else
     @include('errors.sessionEnd')
 @endif

@@ -16,7 +16,7 @@ class AddController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index ()
     {
         return view('layouts.add');
     }
@@ -26,7 +26,7 @@ class AddController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create ()
     {
         return view('forms.create');
     }
@@ -34,98 +34,102 @@ class AddController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store (Request $request)
     {
-
         request()->validate([
             'user_id' => 'required',
             'pallet' => 'required',
             'eilutes' => 'required',
-            'vip' => 'required'
+            'vip' => 'required',
+            'valandos' => 'required'
         ]);
 
         Add::create($request->all());
-        return back()->with('success','Uždirbti pinigai išsaugoti!');
+        return back()->with('success', 'Uždirbti pinigai išsaugoti!');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show ()
     {
 
-        $trackers = Add::where('user_id', '=',auth()->id())->take(5)
+        $trackers = Add::where('user_id', '=', auth()->id())->take(5)
             ->orderBy('created_at', 'desc')
             ->get();
 
-        return View('layouts.show',compact('trackers'));
+        return View('layouts.show', compact('trackers'));
 
     }
-    public function showAll()
+
+    public function showAll ()
     {
 
-        $trackers = Add::where('user_id', '=',auth()->id())
+        $trackers = Add::where('user_id', '=', auth()->id())
             ->orderBy('created_at', 'desc')
-            ->get();
+            ->paginate(6);
 
-        return View('layouts.showAll',compact('trackers'));
+        return View('layouts.showAll', compact('trackers'));
 
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
 
-    public function showMonth()
+    public function showMonth ()
     {
 
         $manages = DB::table('adds')->where('user_id', '=', auth()->id())->take(3)
             ->select(DB::raw('sum(pallet) as totalpallet')
-            ,DB::raw('sum(eilutes) as totaleilutes')
-                ,DB::raw('sum(vip) as totalvip')
-            ,DB::raw('YEAR(created_at) year, MONTH(created_at) month'))
+                , DB::raw('sum(eilutes) as totaleilutes')
+                , DB::raw('sum(vip) as totalvip')
+                , DB::raw('sum(valandos) as totalvalandos')
+                , DB::raw('YEAR(created_at) year, MONTH(created_at) month'))
             ->groupBy('year', 'month')
             ->orderByRaw('min(created_at) desc')
             ->get();
 
 
-        return view('layouts.manage',compact('manages'));
+        return view('layouts.manage', compact('manages'));
     }
-    public function showMonthAll()
+
+    public function showMonthAll ()
     {
 
         $manages = DB::table('adds')->where('user_id', '=', auth()->id())
             ->select(DB::raw('sum(pallet) as totalpallet')
-                ,DB::raw('sum(eilutes) as totaleilutes')
-                ,DB::raw('sum(vip) as totalvip')
-                ,DB::raw('YEAR(created_at) year, MONTH(created_at) month'))
+                , DB::raw('sum(eilutes) as totaleilutes')
+                , DB::raw('sum(vip) as totalvip')
+                , DB::raw('sum(valandos) as totalvalandos')
+                , DB::raw('YEAR(created_at) year, MONTH(created_at) month'))
             ->groupBy('year', 'month')
             ->orderByRaw('min(created_at) desc')
             ->get();
 
 
-        return view('layouts.manageAll',compact('manages'));
+        return view('layouts.manageAll', compact('manages'));
     }
 
     //Delete feature need to be added for user erros but need some kind of safety
     //Maybe other delete screen.
 
-    public function destroy($id)
+    public function destroy ($id)
     {
         $task = Add::findOrFail($id);
 
         $task->delete();
 
-        return back()->with('warning','Ištrinta sekmingai');
+        return back()->with('warning', 'Ištrinta sekmingai');
 
     }
 

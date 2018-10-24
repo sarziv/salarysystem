@@ -21,6 +21,8 @@
                 <br>
                 <div class="d-inline "><b class="modalbodyfontwidth">Vip</b>: {{$tracker['vip']}}</div>
                 <br>
+                <div class="d-inline "><b class="modalbodyfontwidth">Valandos:</b>: {{$tracker['valandos']}}</div>
+                <br>
                 <div class="d-inline bg-warning"><b>Išsaugota</b>: {{$tracker['created_at']}} </div>
 
             </div>

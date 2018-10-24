@@ -14,31 +14,74 @@
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
                         Vartotojas: <b> <?php echo e(Auth::user()->name); ?></b>
                     </div>
-                    <div class="card-body text-center">
-                        <h5 >Mano Statistika</h5>
-                        <ul class="list-group list-group-flush col-12">
-                            <li class="list-group-item justify-content-around col-auto">
-                                Užpildyta dienų:<br>
-                                <span class="badge badge-dark col-3">14</span>
+                    <div class="card-body text-center NoMarginBottonP">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item justify-content-around  col-auto">
+                                <p> Užpildyta dienų: <a class="btn btn-default btn-sm" data-toggle="collapse"
+                                                        href="#collapseUzpildytaDienu" role="button"
+                                                        aria-expanded="false" aria-controls="collapseExample">
+                                        Kas čia?
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseUzpildytaDienu">
+                                    Užpildytų įrašų šitą mėnesį. Skaičiuojami pagal kiek dienų užpildyta įrašų.
+                                </div>
+                                <span class="badge badge-dark col-3"><?php echo e($userData[0]->totalfilled); ?></span>
                             </li>
                             <li class="list-group-item justify-content-around">
-                                Išdirbtos valandos:<br>
-                                <span class="badge badge-dark col-3">14</span>
+                                <p> Išdirbtos valandos: <a class="btn btn-default btn-sm" data-toggle="collapse"
+                                                           href="#collapseIsdirbtosValandos" role="button"
+                                                           aria-expanded="false" aria-controls="collapseExample">
+                                        Kas čia?
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseIsdirbtosValandos">
+                                    Užpildyta įrašų šitą męnesį, 8 Darbo valandos per įrašą ir Papildomos valandos.
+                                </div>
+                                <span class="badge badge-dark col-3"><?php echo e($userData[0]->totalfilled * 8 + $userData[0]->totalvalandos); ?></span>
                             </li>
                             <li class="list-group-item justify-content-around">
-                                Uždirbti pinigai:<br>
-                                <span class="badge badge-dark col-3">1441,7</span>
+                                <p> Uždirbti pinigai: <a class="btn btn-default btn-sm" data-toggle="collapse"
+                                                         href="#collapseUzdirbtiPinigai" role="button"
+                                                         aria-expanded="false" aria-controls="collapseExample">
+                                        Kas čia?
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseUzdirbtiPinigai">
+                                    Šito mėnesio uždibti pinigai,
+                                    <div style="color: red">be papildomų valandų jos skaičiuojamos atskirai.</div>
+                                </div>
+                                <span class="badge badge-dark col-3"><?php echo e(($userData[0]->totaleilutes * 0.09) + ($userData[0]->totalpallet * 0.11) + ($userData[0]->totalvip * 5)); ?>
+
+                                    €</span>
                             </li>
                             <li class="list-group-item justify-content-around">
-                                Papildomos valandos:<br>
-                                <span class="badge badge-dark col-3">4,6</span>
+                                <p> Papildomos valandos: <a class="btn btn-default btn-sm" data-toggle="collapse"
+                                                            href="#collapsePapildomosValandos" role="button"
+                                                            aria-expanded="false" aria-controls="collapseExample">
+                                        Kas čia?
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapsePapildomosValandos">
+                                    Tavo pipildomos valandos , atėjimas ankščiau ir t.t.
+                                </div>
+                                <span class="badge badge-dark col-3"><?php echo e($userData[0]->totalvalandos); ?></span>
                             </li>
                             <li class="list-group-item justify-content-around">
-                                Valandinis:<br>
-                                <span class="badge badge-dark col-3">14</span>
+                                <p> Valandinis: <a class="btn btn-default btn-sm" data-toggle="collapse"
+                                                            href="#collapseValandinis" role="button"
+                                                            aria-expanded="false" aria-controls="collapseExample">
+                                        Kas čia?
+                                    </a>
+                                </p>
+                                <div class="collapse" id="collapseValandinis">
+                                   Tavo uždirbti pinigai padalinus ir tavo išdirbtų valandų (8 + papildomos valandos).
+                                </div>
+                                <span class="badge badge-dark col-3"><?php echo e(round((($userData[0]->totaleilutes * 0.09) + ($userData[0]->totalpallet * 0.11) + ($userData[0]->totalvip * 5)) / ($userData[0]->totalfilled * 8 + $userData[0]->totalvalandos),2)); ?>
+
+                                    € </span>
                             </li>
                         </ul>
-
                     </div>
                 </div>
             </div>

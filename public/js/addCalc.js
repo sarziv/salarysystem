@@ -25,6 +25,7 @@ function populateSecondTextBox() {
     document.getElementById('eilutesSecond').innerHTML = document.getElementById('eilutes').value;
     document.getElementById('palletSecond').innerHTML = document.getElementById('pallet').value;
     document.getElementById('vipSecond').innerHTML = document.getElementById('vip').value;
+    document.getElementById('valandosSecond').innerHTML = document.getElementById('valandos').value;
     document.getElementById('resultSecond').innerHTML = document.getElementById('result').innerHTML;
 }
 
@@ -36,4 +37,3 @@ function modalDisabledAfterClick() {
         });
     });
 }
-

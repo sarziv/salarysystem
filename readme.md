@@ -20,7 +20,7 @@ v0.1
 - form-request bug
 - logout bug.
 
-#### Coming soon
-- Analitics tab.
+#### Coming soon to v0.1.3
+- Analytics tab.
 - Memo tab.
 

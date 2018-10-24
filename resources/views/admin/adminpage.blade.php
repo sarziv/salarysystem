@@ -26,6 +26,7 @@ if($password ==  env('ADMIN_PASSWORD') ) {
                                     <th>Paletės</th>
                                     <th>Eilutės</th>
                                     <th>VIP</th>
+                                    <th>Valandos</th>
                                     <th>Uždirbta</th>
                                     </th>
                                     </thead>
@@ -91,6 +92,7 @@ if($password ==  env('ADMIN_PASSWORD') ) {
                                             <td>{{$data->totalpallet}}</td>
                                             <td>{{$data->totaleilutes}}</td>
                                             <td>{{$data->totalvip}}</td>
+                                            <td>{{$data->totalvalandos}}</td>
                                             <td>{{($data->totaleilutes * 0.09) + ($data->totalpallet * 0.11) + ($data->totalvip * 5)}}€</td>
                                         </tr>
                                     @endforeach

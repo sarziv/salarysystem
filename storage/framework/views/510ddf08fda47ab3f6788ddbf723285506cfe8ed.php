@@ -16,7 +16,7 @@
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
                         <b>Atlyginimas</b>
                         <p>Paskutiniai 3 Mėnesiai</p>
-                        <p><a href="<?php echo e(route('manageAll')); ?>">Visi mano atlyginimai <i class="fa fa-arrow-alt-circle-right"></i></a></p>
+                        <p><button class="btn btn-dark"><a style="color: white" href="<?php echo e(route('manageAll')); ?>">Visi mano atlyginimai <i class="fa fa-arrow-alt-circle-right"></i></a></button></p>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -29,6 +29,7 @@
                                             <th>Paletės</th>
                                             <th>Eilutės</th>
                                             <th>VIP</th>
+                                            <th>Valandos</th>
                                             <th>Uždirbta</th>
                                         </tr>
                                         </thead>
@@ -93,6 +94,7 @@
                                                 <td><?php echo e($manage->totalpallet); ?></td>
                                                 <td><?php echo e($manage->totaleilutes); ?></td>
                                                 <td><?php echo e($manage->totalvip); ?></td>
+                                                <td><?php echo e($manage->totalvalandos); ?></td>
                                                 <td><?php echo e(($manage->totaleilutes * 0.09) + ($manage->totalpallet * 0.11) + ($manage->totalvip * 5)); ?>€</td>
                                             </tr>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

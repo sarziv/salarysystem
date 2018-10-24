@@ -13,7 +13,7 @@
                            Istorija
                        </b>
                         <p>Paskutiniai 5 išsaugoti</p>
-                        <p><a href="<?php echo e(route('trackerAll')); ?>">Visi mano išsaugoti <i class="fa fa-arrow-alt-circle-right"></i></a></p>
+                        <p><button class="btn btn-dark"> <a style="color: white;" href="<?php echo e(route('trackerAll')); ?>">Visi mano išsaugoti <i class="fa fa-arrow-alt-circle-right"></i></a></button></p>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -25,7 +25,9 @@
                                     <tr>
                                         <th>Pal.</th>
                                         <th>Eil.</th>
-                                        <th>VIP</th>
+                                        <th>Vip.</th>
+                                        <br>
+                                        <th>Val.</th>
                                         <th>Uždirbta
                                             <br>
                                             Data</th>
@@ -38,6 +40,7 @@
                                             <td><?php echo e($tracker['pallet']); ?></td>
                                             <td><?php echo e($tracker['eilutes']); ?></td>
                                             <td><?php echo e($tracker['vip']); ?></td>
+                                            <td><?php echo e($tracker['valandos']); ?></td>
                                             <td>
                                                 <?php echo e(($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)+ ($tracker['vip'] * 5)); ?>€
                                             <br>

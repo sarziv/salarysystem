@@ -13,7 +13,7 @@
                            Istorija
                        </b>
                         <p>Paskutiniai 5 išsaugoti</p>
-                        <p><a href="{{ route('trackerAll') }}">Visi mano išsaugoti <i class="fa fa-arrow-alt-circle-right"></i></a></p>
+                        <p><button class="btn btn-dark"> <a style="color: white;" href="{{ route('trackerAll') }}">Visi mano išsaugoti <i class="fa fa-arrow-alt-circle-right"></i></a></button></p>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -25,7 +25,9 @@
                                     <tr>
                                         <th>Pal.</th>
                                         <th>Eil.</th>
-                                        <th>VIP</th>
+                                        <th>Vip.</th>
+                                        <br>
+                                        <th>Val.</th>
                                         <th>Uždirbta
                                             <br>
                                             Data</th>
@@ -38,6 +40,7 @@
                                             <td>{{$tracker['pallet']}}</td>
                                             <td>{{$tracker['eilutes']}}</td>
                                             <td>{{$tracker['vip']}}</td>
+                                            <td>{{$tracker['valandos']}}</td>
                                             <td>
                                                 {{($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)+ ($tracker['vip'] * 5)}}€
                                             <br>

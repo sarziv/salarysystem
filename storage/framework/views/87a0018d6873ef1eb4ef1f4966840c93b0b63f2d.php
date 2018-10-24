@@ -28,7 +28,10 @@
                     Vip:
                     <b><span  class="label" id="vipSecond"></span></b>
                 </div>
-
+                <div class="">
+                    Valandos:
+                    <b><span  class="label" id="valandosSecond"></span></b>
+                </div>
                 <div class="">
                    Uždirbta:
                     <b><span  class="label" id="resultSecond"></span></b> €

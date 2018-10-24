@@ -17,7 +17,7 @@ Route::get('/', function () {
     return redirect('/home');
 });
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@userDataInfo')->name('userData');
 
 Route::resource('add','AddController');
 
