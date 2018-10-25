@@ -22,10 +22,11 @@
                                     <table class="table  table-bordered text-center">
                                         <thead>
                                         <tr>
-                                            <th>Mėnesis</th>
-                                            <th>Paletės</th>
-                                            <th>Eilutės</th>
+                                            <th>Mėn.</th>
+                                            <th>Pal.</th>
+                                            <th>Eil.</th>
                                             <th>VIP</th>
+                                            <th>Val.</th>
                                             <th>Uždirbta</th>
                                         </tr>
                                         </thead>
@@ -88,6 +89,7 @@
                                                 <td>{{$manage->totalpallet}}</td>
                                                 <td>{{$manage->totaleilutes}}</td>
                                                 <td>{{$manage->totalvip}}</td>
+                                                <td>{{$manage->totalvalandos}}</td>
                                                 <td>{{($manage->totaleilutes * 0.09) + ($manage->totalpallet * 0.11) + ($manage->totalvip * 5)}}€</td>
                                             </tr>
                                         @endforeach

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Task;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -23,7 +24,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+        return view('forms.taskCreate');
     }
 
     /**
@@ -34,7 +35,13 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'user_id' => 'required',
+            'memo_text' => 'required'
+        ]);
+
+        Task::create($request->all());
+        return back()->with('success', 'Išsaugota.');
     }
 
     /**
@@ -43,9 +50,13 @@ class TaskController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $taskData = Task::where('user_id', '=', auth()->id())
+            ->orderBy('created_at', 'desc')
+            ->paginate(6);
+
+        return View('layouts.memo', compact('taskData'));
     }
 
     /**

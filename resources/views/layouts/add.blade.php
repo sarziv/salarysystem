@@ -11,7 +11,6 @@
                         <b>Skaičiuok kiek uždirbai!</b>
                     </div>
                     <div class="card-body">
-
                         {!! Form::open(array('route' => 'add.store','method'=>'POST')) !!}
                         @include('forms.create')
                         {!! Form::close() !!}

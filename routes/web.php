@@ -24,7 +24,8 @@ Route::resource('add','AddController');
 Route::get('/tracker', 'AddController@show');
 Route::get('/trackerAll', 'AddController@showAll')->name('trackerAll');
 
-Route::resource('/memo','TaskController');
+Route::resource('memo','TaskController');
+Route::get('/memo', 'TaskController@show')->name('taskData');
 
 Route::get('/manage', 'AddController@showMonth');
 Route::get('/manageAll', 'AddController@showMonthAll')->name('manageAll');

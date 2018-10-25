@@ -37,3 +37,11 @@ function modalDisabledAfterClick() {
         });
     });
 }
+function modalDisabledAfterClickMemo() {
+    //Multiple submit protection on spam
+    $(document).ready(function () {
+        $("#sendMemo").one("click", function () {
+            $(this).attr('disabled', true);
+        });
+    });
+}

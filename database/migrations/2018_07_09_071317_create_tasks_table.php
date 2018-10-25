@@ -1,11 +1,10 @@
 <?php
 
-
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAddsTable extends Migration
+class CreateTasksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +13,10 @@ class CreateAddsTable extends Migration
      */
     public function up()
     {
-        Schema::create('adds', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->integer('pallet');
-            $table->integer('eilutes');
-            $table->integer('vip');
-            $table->integer('valandos');
+            $table->text('memo_text');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ class CreateAddsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('adds');
+        Schema::dropIfExists('tasks');
     }
 }

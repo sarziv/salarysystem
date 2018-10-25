@@ -73,7 +73,7 @@ class AddController extends Controller
 
         $trackers = Add::where('user_id', '=', auth()->id())
             ->orderBy('created_at', 'desc')
-            ->paginate(6);
+            ->paginate(5);
 
         return View('layouts.showAll', compact('trackers'));
 

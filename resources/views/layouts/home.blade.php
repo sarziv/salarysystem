@@ -30,7 +30,7 @@
                                     @if($userData != null)
                                         {{$userData->totalfilled}}
                                     @else
-                                        Neužpildyta.
+                                        Nėra info.
                                     @endif
 
                                 </span>

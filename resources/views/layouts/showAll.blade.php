@@ -57,7 +57,7 @@
                 </div>
             </div>
                 @php
-                $pagination_range = 1;
+                $pagination_range = 0;
                 @endphp
                 <nav aria-label="Page navigation ">
                     <ul class="pagination justify-content-center">

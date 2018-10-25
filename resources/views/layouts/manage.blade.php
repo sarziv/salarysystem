@@ -24,11 +24,11 @@
                                     <table class="table  table-bordered text-center">
                                         <thead>
                                         <tr>
-                                            <th>Mėnesis</th>
-                                            <th>Paletės</th>
-                                            <th>Eilutės</th>
+                                            <th>Mėn.</th>
+                                            <th>Pal.</th>
+                                            <th>Eil.</th>
                                             <th>VIP</th>
-                                            <th>Valandos</th>
+                                            <th>Val.</th>
                                             <th>Uždirbta</th>
                                         </tr>
                                         </thead>
