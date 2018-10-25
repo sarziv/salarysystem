@@ -49,7 +49,7 @@
                                      @if($userData != null)
                                         {{ $userData->totalfilled * 8 + $userData->totalvalandos}}
                                     @else
-                                        Neužpildyta.
+                                        Nėra info.
                                     @endif
 
                                 </span>
