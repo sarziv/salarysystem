@@ -33,7 +33,7 @@
 'method' => 'DELETE',
 'route' => ['add.destroy', $tracker['id']]]); ?>
 
-                <?php echo Form::submit('Ištrinti', ['class' => 'btn btn-danger']); ?>
+                <?php echo Form::submit('Ištrinti', ['class' => 'btn btn-danger','id'=>'deleteModal','onclick'=>'modalDisabledAfterClickModalSecond()']); ?>
 
                 <?php echo Form::close(); ?>
 

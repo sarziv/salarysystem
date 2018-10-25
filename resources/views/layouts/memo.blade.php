@@ -15,7 +15,7 @@
                             @include('forms.taskCreate')
                             {!! Form::close() !!}
                         </div>
-                        <div class="table-responsive">
+                        <div class="table-responsive " style="font-family: 'Play', sans-serif;">
                             <div class="form-group">
                         <table class="table table-bordered text-center">
                             <thead>
@@ -23,8 +23,15 @@
                             </thead>
                             <tbody>
                         @foreach($taskData as $task)
-                                <tr>
-                                    <td> {{$task->memo_text}}</td>
+                                <tr class="col-12">
+                                    <td style="font-family: 'Play', sans-serif; font-size: medium" class="col-11"> {{$task->memo_text}}</td>
+                                    <td class="col-1">
+                                        {!! Form::open([
+'method' => 'DELETE',
+'route' => ['memo.destroy', $task['id']]]) !!}
+                                        {{ Form::button('<i class="fas fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-light col-1','id'=>'deleteButton','onclick'=>'modalDisabledAfterClickDelete()'] )  }}
+                                        {!! Form::close() !!}
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Titan+One);@import url(https://fonts.googleapis.com/css?family=Titillium+Web);/*!
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Titan+One);@import url(https://fonts.googleapis.com/css?family=Titillium+Web);@import url(https://fonts.googleapis.com/css?family=Play);/*!
  * Bootstrap v4.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10558,3 +10558,4 @@ body {
     font-size: 122px;
   }
 }
+

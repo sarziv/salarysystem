@@ -32,7 +32,7 @@
                                         <?php echo e($userData->totalfilled); ?>
 
                                     <?php else: ?>
-                                        Neužpildyta.
+                                        Nėra info.
                                     <?php endif; ?>
 
                                 </span>

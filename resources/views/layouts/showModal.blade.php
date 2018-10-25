@@ -32,7 +32,7 @@
                 {!! Form::open([
 'method' => 'DELETE',
 'route' => ['add.destroy', $tracker['id']]]) !!}
-                {!! Form::submit('Ištrinti', ['class' => 'btn btn-danger']) !!}
+                {!! Form::submit('Ištrinti', ['class' => 'btn btn-danger','id'=>'deleteModal','onclick'=>'modalDisabledAfterClickModalSecond()']) !!}
                 {!! Form::close() !!}
             </div>
 

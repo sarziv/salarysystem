@@ -45,3 +45,19 @@ function modalDisabledAfterClickMemo() {
         });
     });
 }
+function modalDisabledAfterClickDelete() {
+    //Multiple submit protection on spam
+    $(document).ready(function () {
+        $("#deleteButton").one("click", function () {
+            $(this).attr('disabled', true);
+        });
+    });
+}
+function modalDisabledAfterClickModalSecond() {
+    //Multiple submit protection on spam
+    $(document).ready(function () {
+        $("#deleteModal").one("click", function () {
+            $(this).attr('disabled', true);
+        });
+    });
+}

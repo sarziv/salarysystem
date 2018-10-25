@@ -90,6 +90,10 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $taskDelete = Task::findOrFail($id);
+
+        $taskDelete->delete();
+
+        return back()->with('success', 'Ištrinta sekmingai');
     }
 }
