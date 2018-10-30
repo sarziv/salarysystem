@@ -7,8 +7,9 @@
                            placeholder="Naujas priminimas">
                 </div>
     </form>
-        <button id="sendMemo" type="submit" class="btn btn-success col-2 " onclick="modalDisabledAfterClickMemo()">
+        <button id="sendMemo" type="submit" class="btn btn-success col-2" onclick="modalDisabledAfterClickMemo()">
             <i class="fa fa-plus"></i>
+
         </button>
     </div>
     </div>

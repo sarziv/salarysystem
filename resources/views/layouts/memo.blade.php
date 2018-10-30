@@ -22,14 +22,15 @@
 
                             </thead>
                             <tbody>
+                            
                         @foreach($taskData as $task)
                                 <tr class="col-12">
                                     <td style="font-family: 'Play', sans-serif; font-size: medium" class="col-11"> {{$task->memo_text}}</td>
-                                    <td class="col-1">
+                                    <td class="col-2">
                                         {!! Form::open([
 'method' => 'DELETE',
 'route' => ['memo.destroy', $task['id']]]) !!}
-                                        {{ Form::button('<i class="fas fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-light col-1','id'=>'deleteButton','onclick'=>'modalDisabledAfterClickDelete()'] )  }}
+                                        {{ Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger','id'=>'deleteButton','onclick'=>'modalDisabledAfterClickDelete()'] )  }}
                                         {!! Form::close() !!}
                                     </td>
                                 </tr>
