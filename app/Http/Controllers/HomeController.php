@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function userDataInfo ()
     {
         //reused from addController
-        $userData = DB::table('adds')->where([['user_id', '=', auth()->id()],['adds.created_at', '>=', Carbon::now()->subMonths(1)]])
+        $userData = DB::table('adds')->where([['user_id', '=', auth()->id()]])->where([['adds.created_at','>=',Carbon::now()->month]])
             ->select(DB::raw('sum(pallet) as totalpallet')
                 , DB::raw('sum(eilutes) as totaleilutes')
                 , DB::raw('count(user_id) as totalfilled')

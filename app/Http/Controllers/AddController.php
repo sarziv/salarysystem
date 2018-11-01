@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\DB;
 
 class AddController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -98,7 +103,6 @@ class AddController extends Controller
             ->groupBy('year', 'month')
             ->orderByRaw('min(created_at) desc')
             ->get();
-
 
         return view('layouts.manage', compact('manages'));
     }
