@@ -113,7 +113,6 @@ class AddController extends Controller
 
         $manages = DB::table('adds')->where('user_id', '=', auth()->id())
             ->select(DB::raw('sum(pallet) as totalpallet')
-                , DB::raw('sum(user_id) as totalid')
                 , DB::raw('sum(eilutes) as totaleilutes')
                 , DB::raw('sum(vip) as totalvip')
                 , DB::raw('sum(valandos) as totalvalandos')
