@@ -6,7 +6,7 @@
 $password = $_POST['password'];
 if($password ==  env('ADMIN_PASSWORD') ) {
 @endphp
-<div class="container offsetForNavBar" style="margin-top: 20px">
+<div class="container" style="margin-top: 20px">
     <div class="row justify-content-center">
         <div class="col-md-8 col-md-offset-2">
             <meta name="csrf-token" content="{{ csrf_token() }}">

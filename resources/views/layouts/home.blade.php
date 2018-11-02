@@ -1,6 +1,6 @@
 @extends('app')
 @section('content')
-    <div class="container offsetForNavBar" style="margin-top: 20px">
+    <div class="container">
         <div class="row justify-content-center">
             <input type="hidden" name="user_id" value="{{Auth::user()->id}}"/>
             <div class="col-md-8 col-md-offset-2">

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -12,7 +13,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct ()
     {
         $this->middleware('auth');
     }
@@ -26,7 +27,7 @@ class HomeController extends Controller
     public function userDataInfo ()
     {
         //reused from addController
-        $userData = DB::table('adds')->where([['user_id', '=', auth()->id()]])->where([['adds.created_at','>=',Carbon::now()->month]])
+        $userData = DB::table('adds')->where([['user_id', '=', auth()->id()]])->where([['created_at', '>=', Carbon::now()->format('Y-m')]])
             ->select(DB::raw('sum(pallet) as totalpallet')
                 , DB::raw('sum(eilutes) as totaleilutes')
                 , DB::raw('count(user_id) as totalfilled')
@@ -34,7 +35,6 @@ class HomeController extends Controller
                 , DB::raw('sum(valandos) as totalvalandos')
                 , DB::raw('YEAR(created_at) year, MONTH(created_at) month'))
             ->groupBy('year', 'month')->first();
-
 
         return view('layouts.home', compact('userData'));
     }
