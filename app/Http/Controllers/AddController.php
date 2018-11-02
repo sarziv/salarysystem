@@ -104,6 +104,7 @@ class AddController extends Controller
             ->orderByRaw('min(created_at) desc')
             ->get();
 
+
         return view('layouts.manage', compact('manages'));
     }
 
@@ -112,6 +113,7 @@ class AddController extends Controller
 
         $manages = DB::table('adds')->where('user_id', '=', auth()->id())
             ->select(DB::raw('sum(pallet) as totalpallet')
+                , DB::raw('sum(user_id) as totalid')
                 , DB::raw('sum(eilutes) as totaleilutes')
                 , DB::raw('sum(vip) as totalvip')
                 , DB::raw('sum(valandos) as totalvalandos')
@@ -119,7 +121,6 @@ class AddController extends Controller
             ->groupBy('year', 'month')
             ->orderByRaw('min(created_at) desc')
             ->get();
-
 
         return view('layouts.manageAll', compact('manages'));
     }
