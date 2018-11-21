@@ -11,7 +11,6 @@
                 @endif
                 <br>
                 <div class="card">
-                    <input type="hidden" name="user_id" value="{{Auth::user()->id}}"/>
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
                         <b>Atlyginimas</b>
                         <p>Paskutiniai 3 Mėnesiai</p>

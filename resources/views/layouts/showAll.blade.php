@@ -7,7 +7,6 @@
                 <br>
                 @include('flash-message')
                 <div class="card">
-                    <input type="hidden" name="user_id" value="{{Auth::user()->id}}"/>
                     <div class="card-header text-center" style="background-color: #e3f2fd;">
                        <b>
                           Visa Istorija
