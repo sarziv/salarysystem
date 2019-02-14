@@ -4,7 +4,7 @@ function sumValues() {
     num1 = Number(document.getElementById("pallet").value);
     num2 = Number(document.getElementById("eilutes").value);
     num3 = Number(document.getElementById("vip").value);
-    res = (num1 * 0.11) + (num2 * 0.09) + (num3 * 5);
+    res = (num1 * 0.11) + (num2 * 0.09) + (num3 * 3);
     resfixed = res.toFixed(2);
 
 

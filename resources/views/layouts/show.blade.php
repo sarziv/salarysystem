@@ -41,7 +41,7 @@
                                             <td>{{$tracker['vip']}}</td>
                                             <td>{{$tracker['valandos']}}</td>
                                             <td>
-                                                {{($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)+ ($tracker['vip'] * 5)}}€
+                                                {{($tracker['pallet'] * 0.11) + ($tracker['eilutes'] * 0.09)+ ($tracker['vip'] * 3)}}€
                                             <br>
                                                <b>{{$tracker['created_at']->format('y/m/d')}}</b>
                                             </td>

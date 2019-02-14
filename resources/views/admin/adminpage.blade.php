@@ -93,7 +93,7 @@ if($password ==  env('ADMIN_PASSWORD') ) {
                                             <td>{{$data->totaleilutes}}</td>
                                             <td>{{$data->totalvip}}</td>
                                             <td>{{$data->totalvalandos}}</td>
-                                            <td>{{($data->totaleilutes * 0.09) + ($data->totalpallet * 0.11) + ($data->totalvip * 5)}}€</td>
+                                            <td>{{($data->totaleilutes * 0.09) + ($data->totalpallet * 0.11) + ($data->totalvip * 3)}}€</td>
                                         </tr>
                                     @endforeach
                                     </tbody>

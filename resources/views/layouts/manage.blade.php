@@ -92,7 +92,7 @@
                                                 <td>{{$manage->totaleilutes}}</td>
                                                 <td>{{$manage->totalvip}}</td>
                                                 <td>{{$manage->totalvalandos}}</td>
-                                                <td>{{($manage->totaleilutes * 0.09) + ($manage->totalpallet * 0.11) + ($manage->totalvip * 5)}}€</td>
+                                                <td>{{($manage->totaleilutes * 0.09) + ($manage->totalpallet * 0.11) + ($manage->totalvip * 3)}}€</td>
                                             </tr>
                                         @endforeach
                                         </tbody>

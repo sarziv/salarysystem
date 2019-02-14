@@ -31,7 +31,6 @@
                                     @else
                                         Nėra info.
                                     @endif
-
                                 </span>
                             </li>
                             <li class="list-group-item justify-content-around">
@@ -66,7 +65,7 @@
                                 </div>
                                 <span class="badge badge-dark col-3">
                                     @if($userData != null)
-                                        {{($userData->totaleilutes * 0.09) + ($userData->totalpallet * 0.11) + ($userData->totalvip * 5)}}
+                                        {{($userData->totaleilutes * 0.09) + ($userData->totalpallet * 0.11) + ($userData->totalvip * 3)}}
                                     @else
                                         Nėra info.
                                     @endif
