@@ -1,7 +1,6 @@
 ## Web app salary_system
 
-v0.1
-[Site uploaded](https://rimtaivyrai.online/home)
+Laravel application with MySQL, for tracking and counting salaries, etc.
 
 #### v0.1
 - Password reset by email
@@ -24,8 +23,3 @@ v0.1
 - Analytics tab.
 - Memo tab.
 - Loads of fixes.
-
-### Coming to v0.1.4
-- More advanced admin tab
-
-
