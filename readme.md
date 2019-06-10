@@ -23,3 +23,5 @@ Laravel application with MySQL, for tracking and counting salaries, etc.
 - Analytics tab.
 - Memo tab.
 - Loads of fixes.
+
+##Converting into react.js + Laravel passowrd API
